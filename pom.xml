@@ -22,32 +22,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.13.0</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-            <!--<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>cmd</executable> &lt;!&ndash; Use cmd for Windows &ndash;&gt;
-                            <arguments>
-                                <argument>/c</argument> &lt;!&ndash; /c tells cmd to execute the command and then exit &ndash;&gt;
-                                <argument>copy target\${project.build.finalName}.jar C:\Users\user\Desktop\miau\plugins</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>-->
         </plugins>
         <resources>
             <resource>
@@ -69,11 +49,6 @@
             <artifactId>spigot-api</artifactId>
             <version>1.20.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-        </dependency>
-          <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version>
         </dependency>
     </dependencies>
 </project>
