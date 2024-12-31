@@ -52,4 +52,22 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+             <profiles>
+        <profile>
+            <id>jitpack</id>
+            <modules>
+                <module>api</module>
+                <!-- I removed the common module as a dependency as it wasn't really being used -->
+            </modules>
+        </profile>
+
+        <profile>
+            <id>build-jar</id>
+            <modules>
+                <module>plugin</module>
+                <module>common</module>
+                <module>api</module>
+            </modules>
+        </profile>
+    </profiles>
 </project>
