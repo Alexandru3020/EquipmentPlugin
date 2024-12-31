@@ -1,4 +1,4 @@
 install:
  - mvn install
 jdk:
- - openjdk17
+ - https://download.java.net/java/GA/jdk17/0d1cfde4252546c693194d9cc993cb2e/35/GPL/openjdk-17_linux-x64_bin.tar.gz
