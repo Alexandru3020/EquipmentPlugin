@@ -28,6 +28,39 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>cmd</executable> &lt;!&ndash; Use cmd for Windows &ndash;&gt;
+                            <arguments>
+                                <argument>/c</argument> &lt;!&ndash; /c tells cmd to execute the command and then exit &ndash;&gt;
+                                <argument>copy target\${project.build.finalName}.jar C:\Users\user\Desktop\miau\plugins</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>-->
         </plugins>
         <resources>
             <resource>
@@ -43,7 +76,15 @@
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
     </repositories>
+    <profiles>
+        <profile>
+            <id>jitpack</id>
+        </profile>
 
+        <profile>
+            <id>build-jar</id>
+        </profile>
+    </profiles>
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
@@ -52,22 +93,4 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-             <profiles>
-        <profile>
-            <id>jitpack</id>
-            <modules>
-                <module>api</module>
-                <!-- I removed the common module as a dependency as it wasn't really being used -->
-            </modules>
-        </profile>
-
-        <profile>
-            <id>build-jar</id>
-            <modules>
-                <module>plugin</module>
-                <module>common</module>
-                <module>api</module>
-            </modules>
-        </profile>
-    </profiles>
 </project>
