@@ -63,15 +63,6 @@
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
     </repositories>
-    <profiles>
-        <profile>
-            <id>jitpack</id>
-        </profile>
-
-        <profile>
-            <id>build-jar</id>
-        </profile>
-    </profiles>
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
