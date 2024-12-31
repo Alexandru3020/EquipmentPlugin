@@ -1,0 +1,10 @@
+gui:
+  #Requires server reload.
+  equipment_title: "Equipment"
+messages:
+  #Make sure to include an &r after the prefix, to make sure that the color doesn't affect other text. [Optional]
+  #IDK why but this Requires server reload.
+  prefix: "&8[&dEquipment&8]&r"
+  reload:
+    reloading_message: "&6Reloading Config..."
+    reloaded_message: "&aReload Complete!"

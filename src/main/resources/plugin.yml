@@ -1,0 +1,10 @@
+name: EquipmentPlugin
+version: '1.0'
+main: me.Alexandru302.equipmentplugin.EquipmentPlugin
+api-version: '1.20'
+load: STARTUP
+authors: [ Alexandru302 ]
+description: Just a plugin for equipment. not hypixel!11!1!!!
+commands:
+  equipment:
+    description: equipment
