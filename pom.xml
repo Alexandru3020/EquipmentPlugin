@@ -41,26 +41,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>cmd</executable> <!-- Use cmd for Windows -->
-                            <arguments>
-                                <argument>/c</argument> <!-- /c tells cmd to execute the command and then exit -->
-                                <argument>copy target\${project.build.finalName}.jar C:\Users\user\Desktop\miau\plugins</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
         <resources>
             <resource>
